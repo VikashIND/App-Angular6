@@ -1,0 +1,8 @@
+ /* .container{
+    margin-left: 0px;
+    margin-right: 0px!important;
+    margin-top: 0px;
+}  */
+.container{
+    max-width: 1920px;
+}

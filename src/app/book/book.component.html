@@ -1,0 +1,18 @@
+<p>
+  book works!
+</p>
+<div class="panel-body">
+  <li *ngFor='let book of books'>
+    <i>{{book.title}}&nbsp;&nbsp;&nbsp;</i>
+    <i class="font-weight-bold">{{book.author}},&nbsp;&nbsp;&nbsp;</i>
+    <i>Publication Year: {{book.publicationYear}}</i>
+  </li>
+</div>
+<hr>
+<div class="panel-body">
+  <li *ngFor='let reader of readers'>
+    <i>{{reader.readerID}}&nbsp;&nbsp;&nbsp;</i>
+    <i class="font-weight-bold">{{reader.name}},&nbsp;&nbsp;&nbsp;</i>
+    <i>Total Minutes: {{reader.totalMinutesRead}}</i>
+  </li>
+</div>
