@@ -30,6 +30,7 @@ import { LoginComponent } from "./login/login.component";
 import { JwtInterceptor } from "./_helpers/jwt.interceptor";
 import { ErrorInterceptor } from "./_helpers/error.interceptor";
 import { fakeBackendProvider } from "./_helpers/fake-backend";
+import { Login1Component } from "./security/login/login1.component";
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { fakeBackendProvider } from "./_helpers/fake-backend";
     EditBookComponent,
     Template4x4Component,
     LoginComponent,
+    Login1Component,
     PrimeTestComponent
   ],
   imports: [
