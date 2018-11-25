@@ -1,9 +1,9 @@
 import { Component, OnInit } from "@angular/core";
-import { BookService } from "../_service/book.service";
-import { LoggerService } from "../_service/logger.service";
-import { Book } from "../_model/book";
+import { BookService } from "../_services/book.service";
+import { LoggerService } from "../_services/logger.service";
+import { Book } from "../_models/book";
 import { Reader } from "../_data/reader";
-import { DataService } from "../_service/data.service";
+import { DataService } from "../_services/data.service";
 
 @Component({
   selector: "app-book",

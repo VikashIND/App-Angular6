@@ -8,7 +8,7 @@ import { AppUserAuth } from "./security/app-user-auth";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "myAngularApp";
+  title = "My Angular App";
   securityObject: AppUserAuth = null;
 
   constructor(private securityService: SecurityService) {

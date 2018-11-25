@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-import { LoggerService } from "../_service/logger.service";
+import { LoggerService } from "../_services/logger.service";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { AppUserAuth } from "../security/app-user-auth";
 import { Router } from "@angular/router";

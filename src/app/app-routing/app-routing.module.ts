@@ -2,7 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "../home/home.component";
-import { LoginComponent } from "../security/login/login.component";
+
 import { UsersComponent } from "../users/users.component";
 import { UserComponent } from "../users/user/user.component";
 import { AboutusComponent } from "../aboutus/aboutus.component";
@@ -14,6 +14,8 @@ import { BookComponent } from "../book/book.component";
 import { AddBookComponent } from "../book/add-book/add-book.component";
 import { EditBookComponent } from "../book/edit-book/edit-book.component";
 import { AuthGuard } from "../security/auth.guard";
+import { PrimeTestComponent } from "../prime-test/prime-test.component";
+import { LoginComponent } from "../login/login.component";
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "login", component: LoginComponent },
@@ -31,7 +33,11 @@ const appRoutes: Routes = [
   { path: "servers", component: ServersComponent },
   { path: "book", component: BookComponent },
   { path: "addbook", component: AddBookComponent },
-  { path: "editbook", component: EditBookComponent }
+  { path: "editbook", component: EditBookComponent },
+  { path: "primeTest", component: PrimeTestComponent },
+
+  // otherwise redirect to home
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({

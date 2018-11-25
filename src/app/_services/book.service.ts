@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Book } from "../_model/book";
+
 import { allBooks, allReaders } from "../_data/data";
 import { Reader } from "../_data/reader";
+import { Book } from "../_models/book";
 
 @Injectable({
   providedIn: "root"

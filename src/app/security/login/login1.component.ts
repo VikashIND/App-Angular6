@@ -4,11 +4,11 @@ import { AppUser } from "../app-user";
 import { SecurityService } from "../security.service";
 
 @Component({
-  selector: "app-login",
-  templateUrl: "./login.component.html",
+  selector: "app-login1",
+  templateUrl: "./login1.component.html",
   styles: []
 })
-export class LoginComponent implements OnInit {
+export class Login1Component implements OnInit {
   user: AppUser = new AppUser();
   securityObject: AppUserAuth = null;
 

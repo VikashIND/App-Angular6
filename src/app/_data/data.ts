@@ -1,5 +1,5 @@
 import { Reader } from "./reader";
-import { Book } from "../_model/book";
+import { Book } from "../_models/book";
 
 export const allReaders: Reader[] = [
   {
