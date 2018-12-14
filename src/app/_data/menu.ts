@@ -16,6 +16,15 @@ export const menuItemsList: any[] = [
     ]
   },
   {
+    label: "Form",
+    items: [
+      {
+        label: "Sign-Up Form",
+        routerLink: "/reactiveForm"
+      }
+    ]
+  },
+  {
     label: "Edit",
     icon: "pi pi-fw pi-pencil",
     items: [

@@ -16,6 +16,7 @@ import { EditBookComponent } from "../book/edit-book/edit-book.component";
 import { AuthGuard } from "../security/auth.guard";
 import { PrimeTestComponent } from "../prime-test/prime-test.component";
 import { LoginComponent } from "../login/login.component";
+import { formValidation } from "../reactiv-form/form-validation.component";
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "login", component: LoginComponent },
@@ -34,6 +35,7 @@ const appRoutes: Routes = [
   { path: "book", component: BookComponent },
   { path: "addbook", component: AddBookComponent },
   { path: "editbook", component: EditBookComponent },
+  { path: "reactiveForm", component: formValidation },
   { path: "primeTest", component: PrimeTestComponent },
 
   // otherwise redirect to home
