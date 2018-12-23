@@ -2,7 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { first } from "rxjs/operators";
-import { AuthenticationService } from "../_services/authentication.service";
+import { AuthService } from "../_services/auth.service";
 
 @Component({ templateUrl: "login.component.html" })
 export class LoginComponent implements OnInit {
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private route: ActivatedRoute,
     private router: Router,
-    private authenticationService: AuthenticationService
+    private authService: AuthService
   ) {}
 
   ngOnInit() {
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
     });
 
     // reset login status
-    this.authenticationService.logout();
+    this.authService.logout();
 
     // get return url from route parameters or default to '/'
     this.returnUrl = this.route.snapshot.queryParams["returnUrl"] || "/";
@@ -46,17 +46,17 @@ export class LoginComponent implements OnInit {
     }
 
     this.loading = true;
-    this.authenticationService
-      .login(this.f.username.value, this.f.password.value)
-      .pipe(first())
-      .subscribe(
-        data => {
-          this.router.navigate([this.returnUrl]);
-        },
-        error => {
-          this.error = error;
-          this.loading = false;
-        }
-      );
+    // this.authService
+    //   .login(this.f.username.value, this.f.password.value)
+    //   .pipe(first())
+    //   .subscribe(
+    //     data => {
+    //       this.router.navigate([this.returnUrl]);
+    //     },
+    //     error => {
+    //       this.error = error;
+    //       this.loading = false;
+    //     }
+    //   );
   }
 }

@@ -21,6 +21,14 @@ export const menuItemsList: any[] = [
       {
         label: "Sign-Up Form",
         routerLink: "/reactiveForm"
+      },
+      {
+        label: "Employees List",
+        routerLink: "/employees"
+      },
+      {
+        label: "Login",
+        routerLink: "/loginNew"
       }
     ]
   },
@@ -64,6 +72,6 @@ export const menuItemsList: any[] = [
     ]
   },
   { label: "About Us", routerLink: "/aboutus" },
-  { label: "Contact Us", routerLink: "/contactus" },
-  { label: "PrintNg Test", routerLink: "/primeTest" }
+  { label: "Contact Us", routerLink: "/contactus" }
+  // { label: "PrintNg Test", routerLink: "/primeTest" }
 ];

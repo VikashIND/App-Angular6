@@ -1,0 +1,19 @@
+<div class="container">
+  <!-- <button class="btn btn-primary" (click)="save()">Test</button> -->
+  <div class="md-col-8">
+    <table class="table table-condensed table-striped">
+      <thead>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Password</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let employee of employees">
+          <td>{{ employee.id }}</td>
+          <td>{{ employee.userName }}</td>
+          <td>{{ employee.password }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
