@@ -31,8 +31,8 @@ export const menuItemsList: any[] = [
         routerLink: "/loginNew"
       },
       {
-        label:"Category Master",
-        routerLink:"/category"
+        label: "Category Master",
+        routerLink: "/category"
       }
     ]
   },
@@ -64,6 +64,7 @@ export const menuItemsList: any[] = [
   {
     label: "Users",
     items: [
+      { label: "Create User", routerLink: "/createUser" },
       { label: "Users", routerLink: "/users" },
       { label: "Users List", routerLink: "/userslist" }
     ]

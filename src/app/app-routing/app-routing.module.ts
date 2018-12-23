@@ -19,6 +19,7 @@ import { LoginNewComponent } from "../login/login-new/login-new.component";
 import { NoAccessComponent } from "../no-access/no-access.component";
 import { AdminAuthGuard } from "../_services/admin-auth-guard.service";
 import { CategoryComponent } from "../masters/category/category.component";
+import { UserComponent } from "../master/user/user.component";
 const appRoutes: Routes = [
   { path: "", component: HomeComponent },
   { path: "login", component: LoginComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: "loginNew", component: LoginNewComponent },
   { path: "no-access", component: NoAccessComponent },
   { path: "category", component: CategoryComponent },
+  { path: "createUser", component: UserComponent },
 
   // otherwise redirect to home
   { path: "**", redirectTo: "" }

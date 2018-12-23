@@ -20,6 +20,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.items = this.menuService.getAllMenues();
+    // console.log(this.items);
   }
   redirectToLogin() {
     this.router.navigate(["/loginNew"]);

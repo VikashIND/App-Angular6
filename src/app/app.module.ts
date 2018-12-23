@@ -1,4 +1,5 @@
 import { BrowserModule } from "@angular/platform-browser";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
 import { FormsModule, FormBuilder, ReactiveFormsModule } from "@angular/forms";
 import { Routes, RouterModule } from "@angular/router";
@@ -6,6 +7,11 @@ import { Routes, RouterModule } from "@angular/router";
 //PrimeNg Modules
 import { ButtonModule } from "primeng/button";
 import { MenubarModule } from "primeng/menubar";
+import { MessageService } from "primeng/api";
+import { ToastModule } from "primeng/toast";
+import { MessageModule } from "primeng/message";
+import { DropdownModule } from "primeng/dropdown";
+import { PanelModule } from "primeng/panel";
 
 import { AppComponent } from "./app.component";
 import { ServerComponent } from "./server/server.component";
@@ -30,8 +36,11 @@ import { formValidation } from "./reactiv-form/form-validation.component";
 import { EmployeeComponent } from "./employee/employee.component";
 import { LoginNewComponent } from "./login/login-new/login-new.component";
 import { JwtModule } from "@auth0/angular-jwt";
-import { NoAccessComponent } from './no-access/no-access.component';
-import { CategoryComponent } from './masters/category/category.component';
+import { NoAccessComponent } from "./no-access/no-access.component";
+import { CategoryComponent } from "./masters/category/category.component";
+import { UserComponent } from "./master/user/user.component";
+import { InputTextModule } from "primeng/inputtext";
+import { InputTextareaModule } from "primeng/inputtextarea";
 
 @NgModule({
   declarations: [
@@ -53,15 +62,23 @@ import { CategoryComponent } from './masters/category/category.component';
     EmployeeComponent,
     LoginNewComponent,
     NoAccessComponent,
-    CategoryComponent
+    CategoryComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    InputTextModule,
+    InputTextareaModule,
     ButtonModule,
+    ToastModule,
+    MessageModule,
+    DropdownModule,
+    PanelModule,
     MenubarModule,
     JwtModule
 
@@ -70,7 +87,8 @@ import { CategoryComponent } from './masters/category/category.component';
   providers: [
     SecurityService,
     AuthGuard,
-    MenuService
+    MenuService,
+    MessageService
     // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 

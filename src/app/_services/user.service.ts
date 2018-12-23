@@ -4,9 +4,10 @@ import { User } from "../_models/user";
 
 @Injectable({ providedIn: "root" })
 export class UserService {
+  url = "http://localhost:6259/api/Security/";
   constructor(private http: HttpClient) {}
 
-  // getAll() {
-  //   return this.http.get<User[]>(`http://localhost:1000/users`);
-  // }
+  createUser(user: any) {
+    return this.http.post(this.url + "Create", user);
+  }
 }
