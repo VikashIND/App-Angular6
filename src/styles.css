@@ -24,6 +24,10 @@ body {
 }
 .container-fluid {
   background-color: #f3f3f3;
+  height: auto;
+}
+.container {
+  height: auto !important;
 }
 /* .form-control {
     display: block;

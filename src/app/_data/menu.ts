@@ -29,6 +29,10 @@ export const menuItemsList: any[] = [
       {
         label: "Login",
         routerLink: "/loginNew"
+      },
+      {
+        label:"Category Master",
+        routerLink:"/category"
       }
     ]
   },

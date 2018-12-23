@@ -31,6 +31,7 @@ import { EmployeeComponent } from "./employee/employee.component";
 import { LoginNewComponent } from "./login/login-new/login-new.component";
 import { JwtModule } from "@auth0/angular-jwt";
 import { NoAccessComponent } from './no-access/no-access.component';
+import { CategoryComponent } from './masters/category/category.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NoAccessComponent } from './no-access/no-access.component';
     formValidation,
     EmployeeComponent,
     LoginNewComponent,
-    NoAccessComponent
+    NoAccessComponent,
+    CategoryComponent
   ],
   imports: [
     BrowserModule,
