@@ -41,6 +41,19 @@ import { CategoryComponent } from "./masters/category/category.component";
 import { UserComponent } from "./master/user/user.component";
 import { InputTextModule } from "primeng/inputtext";
 import { InputTextareaModule } from "primeng/inputtextarea";
+import {
+  LoggerBase,
+  ConsoleLogger,
+  FileLogger,
+  DBLogger
+} from "./_utility/LoggerUtility";
+import { DIComponent } from './di/di.component';
+
+var providersCollection: any = [];
+providersCollection.push({ provide: LoggerBase, useClass: ConsoleLogger });
+providersCollection.push({ provide: "console", useClass: ConsoleLogger });
+providersCollection.push({ provide: "db", useClass: DBLogger });
+providersCollection.push({ provide: "file", useClass: FileLogger });
 
 @NgModule({
   declarations: [
@@ -63,7 +76,8 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     LoginNewComponent,
     NoAccessComponent,
     CategoryComponent,
-    UserComponent
+    UserComponent,
+    DIComponent
   ],
   imports: [
     BrowserModule,
@@ -88,7 +102,9 @@ import { InputTextareaModule } from "primeng/inputtextarea";
     SecurityService,
     AuthGuard,
     MenuService,
-    MessageService
+    MessageService,
+    providersCollection
+    /// { provide: LoggerBase, useClass: ConsoleLogger }
     // { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     // { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
 

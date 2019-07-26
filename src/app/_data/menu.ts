@@ -77,6 +77,7 @@ export const menuItemsList: any[] = [
     ]
   },
   { label: "About Us", routerLink: "/aboutus" },
-  { label: "Contact Us", routerLink: "/contactus" }
+  { label: "Contact Us", routerLink: "/contactus" },
+  { label: "DI", routerLink: "/di" }
   // { label: "PrintNg Test", routerLink: "/primeTest" }
 ];
